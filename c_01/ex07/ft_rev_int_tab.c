@@ -1,41 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_comb.c                                    :+:      :+:    :+:   */
+/*   ft_rev_int_tab.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: joflorid <joflorid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/10 20:11:33 by joflorid          #+#    #+#             */
-/*   Updated: 2025/07/11 12:33:57 by joflorid         ###   ########.fr       */
+/*   Created: 2025/07/14 11:54:09 by joflorid          #+#    #+#             */
+/*   Updated: 2025/07/14 13:07:28 by joflorid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_print_comb(void)
+void	ft_rev_int_tab(int *tab, int size)
 {
-	char	c1;
-	char	c2;
-	char	c3;
+	int	i;
+	int	aux;
 
-	c1 = '0';
-	while (c1 <= '9')
+	i = 0;
+	size--;
+	while (i <= size)
 	{
-		c2 = c1 + 1;
-		while (c2 <= '9')
-		{
-			c3 = c2 + 1;
-			while (c3 <= '9')
-			{
-				write(1, &c1, 1);
-				write(1, &c2, 1);
-				write(1, &c3, 1);
-				if (!(c1 == '7' && c2 == '8' && c3 == '9'))
-					write(1, ", ", 2);
-				c3++;
-			}
-			c2++;
-		}
-		c1++;
+		aux = tab[i];
+		tab[i] = tab[size];
+		tab[size] = aux;
+		i++;
+		size--;
 	}
 }

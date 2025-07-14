@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_numbers.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: joflorid <joflorid@student.42urduliz.co    +#+  +:+       +#+        */
+/*   By: joflorid <joflorid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/10 19:09:02 by joflorid          #+#    #+#             */
-/*   Updated: 2025/07/10 19:14:21 by joflorid         ###   ########.fr       */
+/*   Updated: 2025/07/11 12:05:47 by joflorid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

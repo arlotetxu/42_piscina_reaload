@@ -1,41 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_comb.c                                    :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: joflorid <joflorid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/10 20:11:33 by joflorid          #+#    #+#             */
-/*   Updated: 2025/07/11 12:33:57 by joflorid         ###   ########.fr       */
+/*   Created: 2025/07/14 11:20:25 by joflorid          #+#    #+#             */
+/*   Updated: 2025/07/14 11:53:24 by joflorid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_print_comb(void)
+int	ft_strlen(char *str)
 {
-	char	c1;
-	char	c2;
-	char	c3;
+	int	count;
 
-	c1 = '0';
-	while (c1 <= '9')
-	{
-		c2 = c1 + 1;
-		while (c2 <= '9')
-		{
-			c3 = c2 + 1;
-			while (c3 <= '9')
-			{
-				write(1, &c1, 1);
-				write(1, &c2, 1);
-				write(1, &c3, 1);
-				if (!(c1 == '7' && c2 == '8' && c3 == '9'))
-					write(1, ", ", 2);
-				c3++;
-			}
-			c2++;
-		}
-		c1++;
-	}
+	count = 0;
+	while (str[count] != '\0')
+		count++;
+	return (count);
 }
